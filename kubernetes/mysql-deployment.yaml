@@ -75,7 +75,7 @@ data:
   init.sql: |
     CREATE DATABASE IF NOT EXISTS order_db;
     CREATE DATABASE IF NOT EXISTS paymentdb;
-    CREATE DATABASE IF NOT EXISTS product_db;
+    CREATE DATABASE IF NOT EXISTS productdb;
 
 
 ---
