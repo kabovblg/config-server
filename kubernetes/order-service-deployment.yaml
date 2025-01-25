@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: order-service-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: order-service-app
@@ -29,11 +29,6 @@ spec:
                 configMapKeyRef:
                   name: mysql-cm
                   key: hostname
-            - name: EUREKA_SERVER_ADDRESS
-              valueFrom:
-                configMapKeyRef:
-                  name: eureka-cm
-                  key: eureka_service_address
 
 ---
 
