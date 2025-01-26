@@ -17,6 +17,7 @@ node {
         }
     }
     stage('Deploy') {
+        sh 'gcloud auth application-default login'
         sh "sed -i 's|IMAGE_URL|${repourl}|g' kubernetes/config-server-deployment.yaml"
         step([$class: 'KubernetesEngineBuilder',
             projectId: env.PROJECT_ID,
