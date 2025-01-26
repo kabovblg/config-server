@@ -24,7 +24,7 @@ node {
             clusterName: env.CLUSTER,
             location: env.ZONE,
             manifestPattern: 'kubernetes/config-server-deployment.yaml',
-            credentialsId: env.PROJECT_ID,
+            credentialsId: 'gcp',
             verifyDeployments: true])
     }
 }
